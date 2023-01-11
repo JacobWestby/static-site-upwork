@@ -1,0 +1,16 @@
+{
+  "name": "scrizzo",
+  "version": "1.0.0",
+  "description": "Upwork project template for a static site",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jacob Westby",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

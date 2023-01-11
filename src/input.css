@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Arthemis, sans-serif;
+  src: url('src/fonts/Arthemis-PKY27.ttf');
+}
+
+@font-face {
+  font-family: Blackrush, sans-serif;
+  src: url('src/fonts/Blackrush-3z7G3.otf');
+}
