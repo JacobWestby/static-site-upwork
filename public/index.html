@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="/public/output.css" />
     <title>Scrizzo</title>
   </head>
-  <body class="bg-primary flex flex-col items-center">
-    <header class="w-[80%] min-h-[100vh]">
-      <nav class="border-b-2 border-black border-opacity-10 w-full min-h-[77px] flex justify-between items-center px-2">
-        <h1 class="logo">Scrizzo</h1>
-        <ul class="flex w-[40%] justify-between">
-          <li>Subscriptions</li>
-          <li>About us</li>
-          <li>Contact</li>
+  <body class="bg-primary flex flex-col items-center justify-between h-screen">
+    <header class="w-[80%] min-h-fit">
+      <nav class="border-b-2 border-black border-opacity-10 w-full min-h-[77px] flex justify-between items-center px-2 mb-10 lg:mb-0">
+        <a href="/public/index.html" class="logo text-xl">Scrizzo</a>
+        <ul class="md:flex w-[40%] justify-between hidden">
+          <a href="/public/pages/subscriptions.html"><li>Subscriptions</li></a>
+          <a href="/public/pages/about.html"><li>About us</li></a>
+          <a href="/public/pages/contact.html"><li>Contact</li></a>
         </ul>
+        <div class="hamburgerBackground h-[28px] w-[28px] cursor-pointer relative md:hidden" style="background-image: url('/src/images/hamburger.svg')">
+          <div class="hamburgerList hidden z-10 flex-col justify-between items-center absolute top-[25px] right-[5px] w-fit h-[150px] px-2 py-3 rounded-lg bg-[#f1f1f1b9] backdrop-blur-sm"></div>
+        </div>
       </nav>
-      <div class="flex w-full justify-between items-center min-h-[80vh] flex-wrap lg:flex-nowrap gap-10 lg:gap-0">
+      <div class="flex w-full justify-between items-center min-h-[70vh] flex-wrap lg:flex-nowrap gap-10 lg:gap-0 mb-10 sm:mb-0">
         <section class="flex flex-col gap-11 w-full lg:w-1/3">
-          <h2 class="text-white text-[3rem] font-semibold">Time for a new way of doing things!</h2>
+          <h2 class="text-white text-[3rem] font-semibold leading-10">Time for a new way of doing things!</h2>
           <h3 class="text-[1.8rem]">We have the best things for you to use!</h3>
         </section>
 
         <!-- CARDS -->
         <section class="flex flex-wrap lg:flex-nowrap lg:w-2/3 w-full relative justify-evenly gap-[2rem] md:gap-5 lg:gap-[5rem]">
           <!-- CARD 1 -->
-          <div class="lg:w-1/3 w-full shadow-lg max-w-[275px] flex flex-col items-center gap-5 pt-3 rounded-lg bg-secondary">
-            <h4 class="text-[1.5rem] font-semibold text-white">Premium</h4>
+          <div class="lg:w-1/3 border-secondary border w-full shadow-lg max-w-[275px] flex flex-col items-center gap-5 pt-3 rounded-lg bg-secondary order-1">
+            <h4 class="text-[1.5rem] font-semibold text-white">Standard</h4>
             <p class="text-white font-thin">It’s time for a change!</p>
             <div class="bg-white w-full py-3 px-9 flex flex-col gap-4 rounded-b-md">
               <h5 class="font-bold">Included</h5>
@@ -46,7 +49,9 @@
           </div>
 
           <!-- CARD 2 -->
-          <div class="lg:w-1/3 w-full shadow-lg max-w-[275px] flex flex-col items-center gap-5 pt-3 rounded-lg bg-white lg:absolute lg:z-10 lg:left-[33%] lg:bottom-[5%]">
+          <div
+            class="lg:w-1/3 border-secondary border w-full shadow-lg max-w-[275px] flex flex-col items-center gap-5 pt-3 rounded-lg bg-white lg:absolute lg:z-10 lg:left-[33%] lg:bottom-[5%] order-0"
+          >
             <h4 class="text-[1.5rem] font-semibold">Premium</h4>
             <p class="font-thin">It’s time for a change!</p>
             <div class="bg-secondary w-full py-3 px-9 flex flex-col gap-4 rounded-b-md">
@@ -65,8 +70,8 @@
           </div>
 
           <!-- CARD 3 -->
-          <div class="lg:w-1/3 w-full shadow-lg max-w-[275px] flex flex-col items-center gap-5 pt-3 rounded-lg bg-secondary">
-            <h4 class="text-[1.5rem] font-semibold text-white">Premium</h4>
+          <div class="lg:w-1/3 border-secondary border w-full shadow-lg max-w-[275px] flex flex-col items-center gap-5 pt-3 rounded-lg bg-secondary order-3">
+            <h4 class="text-[1.5rem] font-semibold text-white">FREE</h4>
             <p class="text-white font-thin">It’s time for a change!</p>
             <div class="bg-white w-full py-3 px-9 flex flex-col gap-4 rounded-b-md">
               <h5 class="font-bold">Included</h5>
@@ -87,5 +92,8 @@
         <!-- CARDS END -->
       </div>
     </header>
+    <footer class="flex items-center justify-center px-5 py-5 text-center w-[80%] font-thin">
+      <p>These subscriptions are the best thing you can subscribe to, it’s so good and really the only thing you need. you can pay monthly and yearly or with firewood.</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/src/index.js"></script>
+    <link rel="stylesheet" href="/public/output.css" />
+    <title>Scrizzo</title>
+  </head>
+  <body class="bg-primary flex flex-col items-center justify-between h-screen">
+    <header class="w-[80%] min-h-fit">
+      <nav class="border-b-2 border-black border-opacity-10 w-full min-h-[77px] flex justify-between items-center px-2 mb-10 lg:mb-0">
+        <a href="/public/index.html" class="logo text-xl">Scrizzo</a>
+        <ul class="md:flex w-[40%] justify-between hidden">
+          <a href="/public/pages/subscriptions.html"><li>Subscriptions</li></a>
+          <a href="/public/pages/about.html"><li>About us</li></a>
+          <a href="/public/pages/contact.html"><li>Contact</li></a>
+        </ul>
+        <div class="hamburgerBackground h-[28px] w-[28px] cursor-pointer relative md:hidden" style="background-image: url('/src/images/hamburger.svg')">
+          <div class="hamburgerList hidden z-10 flex-col justify-between items-center absolute top-[25px] right-[5px] w-fit h-[150px] px-2 py-3 rounded-lg bg-[#f1f1f1b9] backdrop-blur-sm"></div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
