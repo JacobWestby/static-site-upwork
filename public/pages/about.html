@@ -4,23 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/src/index.js"></script>
     <link rel="stylesheet" href="/public/output.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+    <script type="module" src="/src/about.js" defer></script>
+    <script type="module" src="/src/index.js" defer></script>
     <title>Scrizzo</title>
   </head>
   <body class="bg-primary flex flex-col items-center justify-between h-screen">
-    <header class="w-[80%] min-h-fit">
-      <nav class="border-b-2 border-black border-opacity-10 w-full min-h-[77px] flex justify-between items-center px-2 mb-10 lg:mb-0">
+    <header class="min-h-fit w-full flex flex-col items-center gap-3">
+      <!-- NAV -->
+      <nav class="border-b-2 border-black border-opacity-10 min-h-[77px] w-[80%] flex justify-between items-center px-2 lg:mb-0">
         <a href="/public/index.html" class="logo text-xl">Scrizzo</a>
         <ul class="md:flex w-[40%] justify-between hidden">
-          <a href="/public/pages/subscriptions.html"><li>Subscriptions</li></a>
-          <a href="/public/pages/about.html"><li>About us</li></a>
-          <a href="/public/pages/contact.html"><li>Contact</li></a>
+          <a class="w-1/3 px-2" href="/public/pages/subscriptions.html"><li>Subscriptions</li></a>
+          <a class="w-1/3 px-2 font-bold" href="/public/pages/about.html"><li>About us</li></a>
+          <a class="w-1/3 px-2" href="/public/pages/contact.html"><li>Contact</li></a>
         </ul>
         <div class="hamburgerBackground h-[28px] w-[28px] cursor-pointer relative md:hidden" style="background-image: url('/src/images/hamburger.svg')">
           <div class="hamburgerList hidden z-10 flex-col justify-between items-center absolute top-[25px] right-[5px] w-fit h-[150px] px-2 py-3 rounded-lg bg-[#f1f1f1b9] backdrop-blur-sm"></div>
         </div>
       </nav>
+      <!-- NAV ENDS -->
+
+      <!-- ABOUT US -->
+      <section class="animation-box flex flex-col w-full items-center">
+        <h2 class="my-5 font-bold text-white text-xl">About us</h2>
+        <div class="w-full h-screen bg-cover relative flex items-center justify-center" style="background-image: url('/src/images/comp-pointing.jpg')">
+          <div class="bg-[#1E1E1E] opacity-70 absolute h-full w-full about-images"></div>
+          <div class="z-10 text-white h-full flex flex-col lg:items-center justify-center gap-10 px-8 lg:w-[80%]">
+            <h4 class="gsap-animation font-bold self-start">At Scrizzo we belive in teamwork</h4>
+            <p class="gsap-animation">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam tellus in ligula vestibulum, at bibendum purus egestas. Pellentesque pretium turpis eget maximus iaculis. Sed eu
+              neque nunc. Nam vestibulum lacus eget lorem bibendum, et rhoncus nisi dictum. Quisque ornare nisi vitae nulla interdum
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full h-screen bg-cover relative flex items-center justify-center" style="background-image: url('/src/images/meeting-bnw.jpg')">
+          <div class="bg-[#1E1E1E] opacity-70 absolute h-full w-full about-images"></div>
+          <div class="z-10 text-white h-full flex flex-col items-center justify-center gap-10 px-8 lg:w-[80%]">
+            <h4 class="gsap-animation font-bold text-center">At Scrizzo we belive in teamwork</h4>
+            <p class="gsap-animation">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam tellus in ligula vestibulum, at bibendum purus egestas. Pellentesque pretium turpis eget maximus iaculis. Sed eu
+              neque nunc. Nam vestibulum lacus eget lorem bibendum, et rhoncus nisi dictum. Quisque ornare nisi vitae nulla interdum
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full h-screen bg-cover relative flex items-center justify-center about-images" style="background-image: url('/src/images/web-wall.jpg')">
+          <div class="bg-[#1E1E1E] opacity-70 absolute h-full w-full"></div>
+          <div class="z-10 text-white h-full flex flex-col justify-center px-8">
+            <h5 class="gsap-animation text-[2rem] text-center font-bold">Time for everyone to become more connected!</h5>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>

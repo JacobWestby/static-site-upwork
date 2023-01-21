@@ -11,3 +11,51 @@
   font-family: Blackrush, sans-serif;
   src: url('src/fonts/Blackrush-3z7G3.otf');
 }
+
+body::-webkit-scrollbar {
+  width: 5px;
+  float: right; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(111, 111, 111, 0.702);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #36c2fd; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid rgb(99, 99, 99); /* creates padding around scroll thumb */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.subCards {
+  transition: all ease-in-out 1.5;
+  animation: 1.5s fadeIn;
+}
+
+@media (min-width: 768px) {
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      transform: translate(0, 100px);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .subCards {
+    transition: all ease-in-out 1.5;
+    animation: 1.5s fadeInCard;
+  }
+}
