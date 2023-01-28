@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["/public/*.{html,js}", "/src/*.js", "/public/*/*.{html,js}", "/src/*/*.css"],
+  content: ["./public/*.{html,js}", "./src/*.js", "./public/*/*.{html,js}"],
   theme: {
     extend: {},
     colors: {
@@ -10,7 +10,11 @@ module.exports = {
       white: "#FFFEFD",
       black: "#000607",
       overlay: "rgba(30, 30, 30, 0.79)",
-    }
-  },
-  plugins: [],
+    },
+    fontFamily: {
+      artemis: ["Artemis", "sans-serif"],
+      blackrush: ["Blackrush", "sans-serif"],
+    },
+    plugins: [],
+  }
 }

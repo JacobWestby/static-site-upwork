@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/output.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
     <script type="module" defer src="/src/contact.js"></script>
     <script type="module" defer src="/src/index.js"></script>
     <title>Scrizzo</title>
   </head>
   <body class="bg-primary flex flex-col items-center justify-between h-screen">
-    <header class="min-h-fit w-full flex flex-col items-center gap-3">
-      <nav class="border-b-2 border-black border-opacity-10 w-[80%] min-h-[77px] flex justify-between items-center px-2 mb-10 lg:mb-0">
+    <header class="min-h-fit w-[80%] h-full flex flex-col items-center gap-3">
+      <nav class="border-b-2 border-black border-opacity-10 w-full min-h-[77px] flex justify-between items-center px-2 mb-5 lg:mb-0">
         <a href="/public/index.html" class="logo text-xl">Scrizzo</a>
         <ul class="md:flex w-[40%] justify-between hidden">
-          <a class="w-1/3 px-2" href="/public/pages/subscriptions.html"><li>Subscriptions</li></a>
-          <a class="w-1/3 px-2" href="/public/pages/about.html"><li>About us</li></a>
-          <a class="w-1/3 px-2 font-bold" href="/public/pages/contact.html"><li>Contact</li></a>
+          <a href="/public/pages/subscriptions.html"><li>Subscriptions</li></a>
+          <a href="/public/pages/about.html"><li>About us</li></a>
+          <a class="selected" href="/public/pages/contact.html"><li>Contact</li></a>
         </ul>
         <div class="hamburgerBackground h-[28px] w-[28px] cursor-pointer relative md:hidden" style="background-image: url('/src/images/hamburger.svg')">
           <div class="hamburgerList hidden z-10 flex-col justify-between items-center absolute top-[25px] right-[5px] w-fit h-[150px] px-2 py-3 rounded-lg bg-[#f1f1f1b9] backdrop-blur-sm"></div>
@@ -25,16 +26,29 @@
       <!-- NAV ENDS -->
 
       <!-- CONTACT CONTAINER -->
-      <section>
-        <h2>Need to get in touch?</h2>
+      <section class="flex flex-col items-center gap-10 self-center">
+        <h2 class="text-white text-xl my-5 font-bold">Need to get in touch?</h2>
 
-        <section>
-          <div>
-            <p></p>
-          </div>
-          <div>
-            <form></form>
-          </div>
+        <section class="md:grid md:grid-cols-[50%_33%] md:h-fit h-fit pb-5 w-5/6 md:w-full md:justify-evenly md:grid-rows-2 lg:w-5/6 flex flex-col gap-3 items-center md:items-start">
+          <p class="font-bold text-white">We try to answer all inquires as soon as possible but please allow 48hrs to pass before reaching out again</p>
+          <form class="contact-slide flex flex-col bg-white p-5 rounded-md row-start-1 row-end-3 w-[95%] md:w-full">
+            <label class="mb-2" for="name">Name</label>
+            <input class="bg-[#dedede] h-[2rem] rounded-md focus:outline-none focus:shadow-lg px-2" name="name" type="text" />
+
+            <label class="mb-2" for="email">Email</label>
+            <input class="bg-[#dedede] h-[2rem] rounded-md focus:outline-none focus:shadow-lg px-2" name="email" type="text" />
+
+            <label class="mb-2" for="message">Message</label>
+            <textarea class="bg-[#dedede] rounded-md focus:outline-none focus:shadow-lg px-2 py-3 mb-2" name="message" cols="40" rows="5"></textarea>
+            <button type="submit" class="self-end px-4 py-2 bg-accent rounded-sm">Submit</button>
+          </form>
+          <p class="text-white font-thin">
+            Feel free to contact us regarding pricing or discounts for big purchases.
+            <br />
+            Any issues you might have can also be filed here.
+            <br />
+            Any other questions or inquires are of course welcome!
+          </p>
         </section>
       </section>
     </header>

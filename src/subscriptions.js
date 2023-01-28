@@ -95,12 +95,12 @@ arrowForward.addEventListener('click', () => {
         cardIndex = 0
         cardContainer.innerHTML = cardList[cardIndex];
 
-        aboutSubscriptionText.innerHTML = subTextList[cardIndex]
+        aboutSubscriptionText.innerHTML = subTextList[cardIndex];
     } else {
         cardIndex++
         cardContainer.innerHTML = cardList[cardIndex];
 
-        aboutSubscriptionText.innerHTML = subTextList[cardIndex]
+        aboutSubscriptionText.innerHTML = subTextList[cardIndex];
     }
 });
 
@@ -109,11 +109,11 @@ arrowBackward.addEventListener('click', () => {
         cardIndex = 0
         cardContainer.innerHTML = cardList[cardIndex];
 
-        aboutSubscriptionText.innerHTML = subTextList[cardIndex]
+        aboutSubscriptionText.innerHTML = subTextList[cardIndex];
     } else {
         cardIndex++
         cardContainer.innerHTML = cardList[cardIndex];
 
-        aboutSubscriptionText.innerHTML = subTextList[cardIndex]
+        aboutSubscriptionText.innerHTML = subTextList[cardIndex];
     }
 });

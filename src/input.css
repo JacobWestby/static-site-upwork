@@ -1,15 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
 
 @font-face {
   font-family: Arthemis, sans-serif;
-  src: url('src/fonts/Arthemis-PKY27.ttf');
+  src: url('./src/fonts/Arthemis-PKY27.ttf');
 }
 
 @font-face {
   font-family: Blackrush, sans-serif;
-  src: url('src/fonts/Blackrush-3z7G3.otf');
+  src: url('./src/fonts/Blackrush-3z7G3.otf');
 }
 
 body::-webkit-scrollbar {
@@ -58,4 +60,8 @@ body::-webkit-scrollbar-thumb {
     transition: all ease-in-out 1.5;
     animation: 1.5s fadeInCard;
   }
+}
+
+.selected {
+  text-shadow: 0px 0px 1px black;
 }
